@@ -5,7 +5,7 @@ YouTube-to-Video is a containerized utility to download a YouTube video for offl
 ## Getting Started
 
 ```bash
-git clone git clone git@github.com:srbdev/y2v.git && cd y2v
+git clone git@github.com:srbdev/y2v.git && cd y2v
 bash build.bash
 ```
 
