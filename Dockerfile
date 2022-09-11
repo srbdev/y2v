@@ -1,10 +1,10 @@
-FROM debian:bullseye-slim
+FROM alpine:3
 
-RUN apt update && \
-    apt -y upgrade && \
-    apt -y install python3 python3-pip && \
-    apt -y install ffmpeg
+RUN apk add --no-cache python3 py3-pip ffmpeg
 RUN python3 -m pip install --upgrade youtube_dl
 
-WORKDIR /downloads
+RUN adduser -h /home/youtuber -D youtuber
+USER youtuber
+RUN mkdir /home/youtuber/downloads
+WORKDIR /home/youtuber/downloads
 ENTRYPOINT [ "youtube-dl", "-f", "22", "-o", "%(title)s.%(ext)s" ]

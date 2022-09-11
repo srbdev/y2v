@@ -12,7 +12,7 @@ bash build.bash
 ## Run It
 
 ```bash
-docker run --rm -it -v ${PWD}:/downloads y2v
+docker run --rm -it -v ${PWD}:/home/youtuber/downloads y2v
 ```
 
-_Tip: you can set an alias in your `.bashrc` or `.zshrc` to run the container as a command, by adding the following line to the file `alias y2v='docker run --rm -it -v ${PWD}:/downloads y2v'`_
+_Tip: you can set an alias in your `.bashrc` or `.zshrc` to run the container as a command, by adding the following line to the file `alias y2v='docker run --rm -it -v ${PWD}:/home/youtuber/downloads y2v'`_
